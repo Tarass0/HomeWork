@@ -1,0 +1,292 @@
+@mixin btn {
+    border: 1px solid;
+    width: 20%;
+    height: 9vh;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+}
+@mixin btn-md {
+    border: 1px solid;
+    width: 25%;
+    height: 60px;
+    text-align: center;
+    font-size: 30px;
+}
+.calkulator{
+    border: 2px solid;
+    background: rgb(94, 199, 94);
+    .first-row{
+        width: 100%;
+        justify-content: space-between;
+        .name{
+            font-size: 40px;
+        }
+        .row__icons{
+            display: flex;
+            list-style: none;
+            padding: 0;
+            li{
+                padding-left: 20px;
+                i{
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+    .second-row{
+        width: 100%;
+        margin-top: 30px;
+        justify-content: space-between;
+        .left{
+            list-style: none;
+            display: flex;
+            font-size: 30px;
+            padding: 0;
+            :nth-child(2){
+                padding-left: 30px;
+            }
+       }
+       .right{
+           i{
+            font-size: 35px;
+           }
+       }
+    }
+    .third-row{
+        margin-top: 20px;
+        .col-lg-12{
+            display: flex;
+            justify-content: flex-end;
+            .display{
+                // margin-right: 35px;
+                background: azure;
+                padding-right: 10px;
+                width: 100%;
+                height: 70px;
+                font-size: 40px;
+                text-align: right;
+            }
+        }
+    }
+    .four-row{
+        margin-top: 50px;
+        margin-bottom: 30px;
+        .col-lg-12{
+            display: flex;
+            :last-child{
+                display: none;
+            }
+            .line-M{
+                width: 100%;
+                max-width: 100px;
+                height: auto;
+                text-align: center;
+                font-size: 20px;
+                font-weight: 500;
+            } 
+        }
+    }
+    .fifth-row{
+        .col-lg-12{
+            display: flex;
+            .action{
+                @include btn;
+            }
+        }
+    }
+    .fifth-row__md{
+        display: none;
+    }
+    .six-row{
+        .col-lg-12{
+            display: flex;
+            .action{
+                @include btn;
+            }
+        }
+    }
+    .six-row__md{
+        display: none;
+    }
+    .seven-row{
+        .col-lg-12{
+            display: flex;
+            .action{
+                @include btn;
+            }
+        }
+    }
+    .seven-row__md{
+        display: none;
+    }
+    .eight-row{
+        .col-lg-12{
+            display: flex;
+            .action{
+                @include btn;
+            }
+        }
+    }
+    .eight-row__md{
+        display: none;
+    }
+    .nine-row{
+        .col-lg-12{
+            display: flex;
+            .action{
+                @include btn;
+            }
+        }
+    }
+    .nine-row__md{
+        display: none;
+    }
+    .tens-row__md{
+        display: none;
+    }
+}
+@media screen and(max-width:768px){
+    .calkulator{
+        border: 2px solid; 
+        .first-row{
+            width: 100%;
+            justify-content: space-between;
+            .name{
+                font-size: 40px;
+            }
+            .row__icons{
+                display: flex;
+                list-style: none;
+                padding: 0;
+                li{
+                    padding-left: 20px;
+                    i{
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+        .second-row{
+            width: 100%;
+            margin-top: 25px;
+            justify-content: space-between;
+            .left{
+                list-style: none;
+                display: flex;
+                font-size: 30px;
+                padding: 0;
+                :nth-child(2){
+                    padding-left: 30px;
+                }
+           }
+           .right{
+               i{
+                font-size: 35px;
+               }
+           }
+        }
+        .third-row{
+            margin-top: 15px;
+            .col-lg-12{
+                display: flex;
+                justify-content: flex-end;
+                .text-field{
+                    // margin-right: 35px;
+                    width: 100%;
+                    height: 70px;
+                    font-size: 40px;
+                    text-align: right;
+                }
+            }
+        }
+        .four-row{
+            margin-top: 25px;
+            margin-bottom: 30px;
+            .col-lg-12{
+                display: flex;
+                justify-content: space-around;
+                :last-child{
+                    display: block;
+                }
+                .line-M{
+                    width: 100%;
+                    max-width: 100px;
+                    height: auto;
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                } 
+            }
+        }
+        .fifth-row{
+            display: none;
+        }
+        .fifth-row__md{
+            display: flex;
+            .col-lg-12{
+                display: flex;
+                .action{
+                    @include btn-md;
+                }
+            }
+        }
+        .six-row{
+            display: none;
+        }
+        .six-row__md{
+            display: flex;
+            .col-lg-12{
+                display: flex;
+                .action{
+                    @include btn-md;
+                }
+            }
+        }
+        .seven-row{
+            display: none;
+        }
+        .seven-row__md{
+            display: flex;
+            .col-lg-12{
+                display: flex;
+                .action{
+                    @include btn-md;
+                }
+            }
+        }
+        .eight-row{
+            display: none;
+        }
+        .eight-row__md{
+            display: flex;
+            .col-lg-12{
+                display: flex;
+                .action{
+                    @include btn-md;
+                }
+            }
+        }
+        .nine-row{
+            display: none;
+        }
+        .nine-row__md{
+            display: flex;
+            .col-lg-12{
+                display: flex;
+                .action{
+                    @include btn-md;
+                }
+            }
+        }
+        .tens-row__md{
+            display: flex;
+            .col-lg-12{
+                display: flex;
+                .action{
+                    @include btn-md;
+                }
+            }
+        }
+    }  
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Calkulator</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  	crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="calkulator">
+      <div class="row first-row">
+        <div class="col-lg-auto col-md-auto col-sm-auto col-auto">
+          <div class="name">
+            Calkulator
+          </div>
+        </div>
+        <div class="col-lg-auto col-md-auto col-sm-auto col-auto">
+          <ul class="row__icons">
+            <li><i class="far fa-window-minimize"></i></li>
+            <li><i class="far fa-square"></i></li>
+            <li><i class="fas fa-times"></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row second-row">
+        <div class="col-lg-auto col-md-auto col-sm-auto col-auto">
+          <ul class="left">
+            <li><i class="fas fa-bars"></i></li>
+            <li>Standart</li>
+          </ul>
+        </div>
+        <div class="col-lg-auto col-md-auto col-sm-auto col-auto">
+          <div class="right">
+            <i class="far fa-clock"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="row third-row">
+        <div class="col-lg-12">
+          <!-- <div class="display">0</div> -->
+          <input class="display">
+        </div>
+      </div>
+
+      <div class="row four-row">
+        <div class="col-lg-12">
+          <button class="btn line-M" value="">MC</button>
+          <button class="btn line-M" value="">MR</button>
+          <button class="btn line-M" value="">M+</button>
+          <button class="btn line-M" value="">M-</button>
+          <button class="btn line-M" value="">MS</button>
+          <button class="btn line-M" value="">M</button>
+        </div>
+      </div>
+
+
+      <div class="row fifth-row ">
+        <div class="col-lg-12">
+          <button class="btn action">%</button>
+          <button class="btn action">CE</button>
+          <button class="btn action" onclick="c()">C</button>
+          <button class="btn action" onclick="del()">
+            <!-- <i class="fas fa-backward"></i> -->
+            &#8592;
+          </button>
+          <button class="btn action" onclick="insrt('/')">/</button>
+        </div>
+      </div>
+      <div class="row fifth-row__md ">
+        <div class="col-lg-12">
+          <button class="btn action">%</button>
+          <button class="btn action">&radic;</button>
+          <button class="btn action">x<sup>2</sup></button>
+          <button class="btn action">1/x</button>
+        </div>
+      </div>
+
+      <div class="row six-row ">
+        <div class="col-lg-12">
+          <button class="btn action">&radic;</button>
+          <button class="btn action" onclick="insrt(7)">7</button>
+          <button class="btn action" onclick="insrt(8)">8</button>
+          <button class="btn action" onclick="insrt(9)">9</button>
+          <button class="btn action" onclick="insrt('*')">*</button>
+        </div>
+      </div>
+      <div class="row six-row__md ">
+        <bu class="col-lg-12">
+          <button class="btn action">CE</button>
+          <button class="btn action" onclick="c()">C</button>
+          <button class="btn action" onclick="del()">
+            <!-- <i class="fas fa-backward"></i> -->
+            &#8592;
+          </button>
+          <button class="btn action" onclick="insrt('/')">/</button>
+        </div>
+      <!-- </div> -->
+
+      <div class="row seven-row ">
+        <div class="col-lg-12">
+          <button class="btn action">x<sup>2</sup></button>
+          <button class="btn action" onclick="insrt(4)">4</button>
+          <button class="btn action" onclick="insrt(5)">5</button>
+          <button class="btn action" onclick="insrt(6)">6</button>
+          <button class="btn action" onclick="insrt('-')">-</button>
+        </div>
+      </div>
+      <div class="row seven-row__md ">
+        <div class="col-lg-12">
+          <button class="btn action" onclick="insrt(7)">7</button>
+          <button class="btn action" onclick="insrt(8)">8</button>
+          <button class="btn action" onclick="insrt(7)">9</button>
+          <button class="btn action" onclick="insrt('*')">*</button>
+        </div>
+      </div>
+
+      <div class="row eight-row ">
+        <div class="col-lg-12">
+          <button class="btn action">x<sup>3</sup></button>
+          <button class="btn action" onclick="insrt(1)">1</button>
+          <button class="btn action" onclick="insrt(2)">2</button>
+          <button class="btn action" onclick="insrt(3)">3</button>
+          <button class="btn action" onclick="insrt('+')">+</button>
+        </div>
+      </div>
+      <div class="row eight-row__md">
+        <div class="col-lg-12">
+          <button class="btn action" onclick="insrt(4)">4</button>
+          <button class="btn action" onclick="insrt(5)">5</button>
+          <button class="btn action" onclick="insrt(6)">6</button>
+          <button class="btn action" onclick="insrt('-')">-</button>
+        </div>
+      </div>
+
+      <div class="row nine-row">
+        <div class="col-lg-12">
+          <button class="btn action">1/x</button>
+          <button class="btn action">+-</button>
+          <button class="btn action" onclick="insrt(0)">0</button>
+          <button class="btn action" onclick="insrt('.')">,</button>
+          <button class="btn action" onclick="eql()">=</button>
+        </div>
+      </div>
+      <div class="row nine-row__md">
+        <div class="col-lg-12">
+          <button class="btn action" onclick="insrt(1)">1</button>
+          <button class="btn action" onclick="insrt(2)">2</button>
+          <button class="btn action" onclick="insrt(3)">3</button>
+          <button class="btn action" onclick="insrt('+')">+</button>
+        </div>
+      </div>
+
+      <div class="row tens-row__md">
+        <div class="col-lg-12">
+          <button class="btn action">+-</button>
+          <button class="btn action" onclick="insrt(0)">0</button>
+          <button class="btn action" onclick="insrt('.')">,</button>
+          <button class="btn action" onclick="eql()">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="JS/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
